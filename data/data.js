@@ -22,6 +22,8 @@ var visibilitygroups = {
           'C1_nieuw.008_11',
           'C1_nieuw.009_12',
           'C1_nieuw.010_13',
+          'C2_14',
+          'C1_basis_15',
         ]
       },
       {
@@ -97,6 +99,11 @@ var visibilitygroups = {
           'C1_nieuw.010_13',
         ]
       },
+      {
+        name: 'a12',
+        objectnames: [
+          'C2_14',
+          'C1_basis_15',
     ]
   }
 }
