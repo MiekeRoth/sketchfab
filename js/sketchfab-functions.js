@@ -48,7 +48,7 @@ var setAnnotationVisibility = function(api, annotationID, doShow) {
     
   } else {
     api.hideAnnotation(annotationID, function(err, index) {
-      if(err) console.log(err)
+      if (err) console.log(err)
     });
   }
 }
@@ -60,5 +60,59 @@ var hideAllAnnotations = function(api) {
         setAnnotationVisibility(api, n, false)
       }
     }
-});
+  });
+}
+
+function getAnimations(api) {
+  api.getAnimations((err, animations) => {
+    if (err) console.log(err)
+    store.animations = animations
+  })
+}
+
+function setCurrentAnimationByUID(api, UID) {
+  return new Promise ((resolve, reject) => {
+    if (api) {
+      api.setCurrentAnimationByUID(UID, err => {
+        if (err) reject(err)
+        resolve()
+      })
+    } else reject()
+  })
+}
+
+function playAnimation(api, animationID) {
+  setCurrentAnimationByUID(api, store.animations[animationID][0])
+  .then(() => {
+    // before starting the animation, reverse to the start
+    api.seekTo(0.0, err => {
+      if (err) console.log(err)
+      api.play(err => {
+        if (err) console.log(err)
+      })
+    });
+  })
+}
+
+function pauseAnimation(api) {
+  api.pause(err => {
+    if (err) console.log(err)
+  })
+}
+
+function tabClick(api, eventID) {
+  // Each tab has similar actions. The specific data is just different. This click event
+  // handles all actions based on a data object with a specific ID
+
+  // get the bundle of data for this event
+  const data = eventData.find(item => item.name === eventID)
+
+  // execute the actions for this data bundle
+  if (data.visibilitygroup && data.visibilityoption) setVisibilityGroup(api, data.visibilitygroup, data.visibilityoption)
+  if (data.annotation !== null) api.gotoAnnotation(data.annotation, { preventCameraAnimation: false, preventCameraMove: false })
+  if (data.animation != null) {
+    playAnimation(api, data.animation)
+  } else {
+    pauseAnimation(api)
+  }
 }
