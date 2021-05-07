@@ -32,6 +32,8 @@ client.init(uid, {
   success: function(api){
     api.start();
     api.addEventListener('viewerready', function(){
+      getNodeMap(api)
+      
       initc1(api);
     });
   },
