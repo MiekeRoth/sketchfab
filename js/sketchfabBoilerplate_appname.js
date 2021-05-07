@@ -33,6 +33,7 @@ client.init(uid, {
     api.start();
     api.addEventListener('viewerready', function(){
       getNodeMap(api)
+      getAnimations(api)
       
       initc1(api);
     });
