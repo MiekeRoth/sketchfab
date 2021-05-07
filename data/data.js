@@ -1,4 +1,4 @@
-var visibilitygroups = {
+const visibilitygroups = {
   vertebrae: {
     title: 'Vertebrae',
     options: [
@@ -109,3 +109,97 @@ var visibilitygroups = {
     ]
   }
 } 
+
+const eventData = [
+  {
+    name: 'a0',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a0',
+    annotation: 0,
+    animation: null
+  },
+  {
+    name: 'a1',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a1',
+    annotation: 1,
+    animation: null
+  },
+  {
+    name: 'a2',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a2',
+    annotation: 2,
+    animation: null
+  },
+  {
+    name: 'a3',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a3',
+    annotation: 3,
+    animation: null
+  },
+  {
+    name: 'a4',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a4',
+    annotation: 4,
+    animation: null
+  },
+  {
+    name: 'a5',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a5',
+    annotation: 5,
+    animation: null
+  },
+  {
+    name: 'a6',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a6',
+    annotation: 6,
+    animation: null
+  },
+  {
+    name: 'a7',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a7',
+    annotation: 7,
+    animation: null
+  },
+  {
+    name: 'a8',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a8',
+    annotation: 8,
+    animation: null
+  },
+  {
+    name: 'a9',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a9',
+    annotation: 9,
+    animation: null
+  },
+  {
+    name: 'a10',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a10',
+    annotation: 10,
+    animation: null
+  },
+  {
+    name: 'a11',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a11',
+    annotation: 11,
+    animation: null
+  },
+  {
+    name: 'a12',
+    visibilitygroup: 'vertebrae',
+    visibilityoption: 'a12',
+    annotation: 0,
+    animation: 0
+  },
+]
