@@ -104,6 +104,8 @@ var visibilitygroups = {
         objectnames: [
           'C2_14',
           'C1_basis_15',
+       ]
+      },
     ]
   }
-}
+} 
