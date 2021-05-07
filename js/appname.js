@@ -1,66 +1,63 @@
 function initc1(api){
-  elClick('a0', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a0')
-		api.gotoAnnotation(0, { preventCameraAnimation: false, preventCameraMove: false });
-  });
+  // elClick('a0', function () {
+  //   tabClick(api, 'a0')
+  // });
   
+  // elClick('a1', function () {
+  //   tabClick(api, 'a1')
+  //  });
   
-  elClick('a1', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a1')
-    api.gotoAnnotation(1, { preventCameraAnimation: false, preventCameraMove: false });
-   });
+	// elClick('a2', function () {
+  //   tabClick(api, 'a2')
+  // });
   
-	elClick('a2', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a2')
-    api.gotoAnnotation(2, { preventCameraAnimation: false, preventCameraMove: false });
-  });
-  
-  elClick('a3', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a3')
-    api.gotoAnnotation(3, { preventCameraAnimation: false, preventCameraMove: false });
-	});
+  // elClick('a3', function () {
+  //   tabClick(api, 'a3')
+	// });
 
-	elClick('a4', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a4')
-    api.gotoAnnotation(4, { preventCameraAnimation: false, preventCameraMove: false });
-  });
+	// elClick('a4', function () {
+  //   tabClick(api, 'a4')
+  // });
 
-	elClick('a5', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a5')
-    api.gotoAnnotation(5, { preventCameraAnimation: false, preventCameraMove: false });
-  });
+	// elClick('a5', function () {
+  //   tabClick(api, 'a5')
+  // });
 	
-  elClick('a6', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a6')
-    api.gotoAnnotation(6, { preventCameraAnimation: false, preventCameraMove: false });
-  });
+  // elClick('a6', function () {
+  //   tabClick(api, 'a6')
+  // });
   
-	elClick('a7', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a7')
-    api.gotoAnnotation(7, { preventCameraAnimation: false, preventCameraMove: false });
-  });
+	// elClick('a7', function () {
+  //   tabClick(api, 'a7')
+  // });
   
-	elClick('a8', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a8')
-    api.gotoAnnotation(8, { preventCameraAnimation: false, preventCameraMove: false });
-  });
+	// elClick('a8', function () {
+  //   tabClick(api, 'a8')
+  // });
 
-	elClick('a9', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a9')
-    api.gotoAnnotation(9, { preventCameraAnimation: false, preventCameraMove: false });
-  });
+	// elClick('a9', function () {
+  //   tabClick(api, 'a9')
+  // });
 
-	elClick('a10', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a10')
-    api.gotoAnnotation(10, { preventCameraAnimation: false, preventCameraMove: false });
-  });
+	// elClick('a10', function () {
+  //   tabClick(api, 'a10')
+  // });
 
-	elClick('a11', function () {
-		setVisibilityGroup(api, 'vertebrae', 'a11')
-    api.gotoAnnotation(11, { preventCameraAnimation: false, preventCameraMove: false });
-  });
+	// elClick('a11', function () {
+  //   tabClick(api, 'a11')
+  // });
 
-  
+	// elClick('a12', function () {
+  //   tabClick(api, 'a12')
+  // });
+
+  // generic alternative
+  const elementNames = ['a0', 'a1', 'a2', 'a3', 'a4', 'a5', 'a6', 'a7', 'a8', 'a9', 'a10', 'a11', 'a12']
+  elementNames.forEach(name => {
+    elClick(name, function () {
+      tabClick(api, name)
+    });
+  });
   
   api.getSceneGraph(function (err, result) {
     if (err) {
